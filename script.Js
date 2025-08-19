@@ -16,26 +16,28 @@ function createGrid(num){
 }
 
 function askForGridSize(){
-    let gridSize = Number(window.prompt("Please enter a number between 10 - 100 to be your sketch size: "));
+    
+    while(true){
+        let gridSize = Number(window.prompt("Please enter a number between 10 - 100 to be your sketch size: "));
 
-    while(gridSize < 10 || gridSize > 100){
-
-        if(gridSize < 10){
-           gridSize = Number(prompt("The number needs to be greater than 10 and less than 100:"));
+        if(gridSize === 0){
+        return null;
         }
-        else if(gridSize > 100)
-            {
-            gridSize = Number(prompt("The number needs to be less than 100:"))
+
+        if(!isNaN(gridSize) && gridSize >= 10 && gridSize <= 100){
+            return gridSize;
         }
     }
-
-    return gridSize;
 }
 
 function createNewGrid(){
-    contendor.innerHTML = '';
+
     const gridSize =  askForGridSize();
-    createGrid(gridSize);
+
+    if(gridSize !== null){
+        contendor.innerHTML = '';
+        createGrid(gridSize);
+    }
 }
 
 createGrid(16)
