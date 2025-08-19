@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* para centrar verticalmente */
+    margin: 0;
+}
+
+
+.container{
+    margin-top: 20px;
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerSketch {
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.cajita {
+    border: 1px solid red;
+    
+}
+
+.color{
+    background-color: pink;
+}
