@@ -1,4 +1,6 @@
 const container =  document.querySelector(".container");
+let colors = ['#BB8588', '#D6CE93', '#D8A48F', '#fcd5ce', '#997b66', '#ffcb69', '#87986a', '#ffe3e0'];
+
 
 function createGrid(num){
 
@@ -9,7 +11,7 @@ function createGrid(num){
     let opacityCounter = 0.1;
 
     box.addEventListener('mouseenter', () => {
-        box.style.backgroundColor= "#b0c4b1"; 
+        box.style.backgroundColor= getColor(); 
 
         if(opacityCounter < 1){
             box.style.opacity = opacityCounter;
@@ -57,7 +59,12 @@ function cleanGrid(){
         })
 }
 
-
+function getColor(){
+    let random = Math.floor(Math.random() * colors.length);
+    color = colors[random];
+    
+    return color;
+}
 
 createGrid(16)
 
