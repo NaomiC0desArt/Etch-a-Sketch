@@ -9,6 +9,8 @@ body{
     align-items: center;
     height: 100vh; /* para centrar verticalmente */
     margin: 0;
+    font-family: 'DM Serif Text', Arial, Helvetica, sans-serif;
+    background-color: #fefae0;
 }
 
 
@@ -31,7 +33,7 @@ body{
 
 
 .cajita {
-    border: 1px solid red;
+    border: 1px solid #1b263b;
     
 }
 
@@ -39,19 +41,25 @@ body{
     background-color: pink;
 }
 
-#cleanGrid{
+#cleanGrid, #btnCreate{
     margin-top: 20px;
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
-    color: #000814;
+    color: #432818;
     background-color: #b0c4b1;
     border: none;
     border-radius: 8px;
 }
 
-#cleanGrid:hover{
+#cleanGrid:hover, #btnCreate:hover{
     background-color: #4a5759;
     color: #dedbd2;
 }
 
+
+#title{
+    font-size: 68px;
+    color: #432818;
+    margin-bottom: -10px;
+}

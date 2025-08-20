@@ -6,9 +6,16 @@ function createGrid(num){
     const box = document.createElement("div");
     box.classList.add("cajita");
     box.style.cssText = `flex: 0 0 calc(100% / ${num}); height: calc(100% / ${num});`;
+    let opacityCounter = 0.1;
 
     box.addEventListener('mouseenter', () => {
-        box.style.backgroundColor= "blue"; 
+        box.style.backgroundColor= "#b0c4b1"; 
+
+        if(opacityCounter < 1){
+            box.style.opacity = opacityCounter;
+            opacityCounter += 0.1;
+        }
+
     });
 
     container.appendChild(box);
@@ -46,6 +53,7 @@ function cleanGrid(){
 
         boxes.forEach(box =>{
             box.style.backgroundColor = "transparent";
+            box.style.opacity = 1;
         })
 }
 
