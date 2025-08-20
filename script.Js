@@ -1,4 +1,4 @@
-const contendor =  document.querySelector(".container");
+const container =  document.querySelector(".container");
 
 function createGrid(num){
 
@@ -11,7 +11,7 @@ function createGrid(num){
         box.style.backgroundColor= "blue"; 
     });
 
-    contendor.appendChild(box);
+    container.appendChild(box);
 }
 }
 
@@ -35,12 +35,26 @@ function createNewGrid(){
     const gridSize =  askForGridSize();
 
     if(gridSize !== null){
-        contendor.innerHTML = '';
+        container.innerHTML = '';
         createGrid(gridSize);
     }
 }
+
+function cleanGrid(){
+    
+    const boxes = container.querySelectorAll('div');
+
+        boxes.forEach(box =>{
+            box.style.backgroundColor = "transparent";
+        })
+}
+
+
 
 createGrid(16)
 
 const btnCreate = document.querySelector("#btnCreate");
 btnCreate.addEventListener('click', createNewGrid);
+
+const btnClean = document.querySelector("#cleanGrid");
+btnClean.addEventListener('click', cleanGrid);

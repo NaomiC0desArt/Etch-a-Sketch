@@ -38,3 +38,20 @@ body{
 .color{
     background-color: pink;
 }
+
+#cleanGrid{
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000814;
+    background-color: #b0c4b1;
+    border: none;
+    border-radius: 8px;
+}
+
+#cleanGrid:hover{
+    background-color: #4a5759;
+    color: #dedbd2;
+}
+
